@@ -24,3 +24,6 @@ class QuestionBuilder(object):
         if len(self.additional_data) > 0:
             question.additional_data = self.additional_data
         return question
+
+    def getValidations(self):
+        return self.validations

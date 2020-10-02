@@ -14,6 +14,6 @@ class MyEncoder(JSONEncoder):
 
 myclass = MyClass(4, 5)
 json = MyEncoder().encode(myclass)
-f = open("myform.json", "w")
+f = open("D:\\practicas\\myform.json", "w")
 f.write(json)
 f.close()

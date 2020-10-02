@@ -16,3 +16,6 @@ class Answer(object):
         self.question = question
         self.answers = answers
 
+    def toString(self):
+        return self.question.title + " -> " , self.answers
+

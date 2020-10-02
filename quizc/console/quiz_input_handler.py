@@ -10,7 +10,13 @@ class QuestionInputHandler(object):
             answers = self.collect_answer_options(question)
         else:
             print(question.type.name + ' value:')
-            answers = [input(self.MENU_PROMPT)]
+            if question.type.name == "NUMERIC":
+                try:
+                    answers = [int(input(self.MENU_PROMPT))]
+                except:
+                    print("This value must be numeric")
+            else:
+                answers = [input(self.MENU_PROMPT)]
         return answers
 
     def collect_answer_options(self, question):

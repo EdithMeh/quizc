@@ -28,6 +28,6 @@ class QuizUIHandler(object):
         print(quiz_answer.quiz.title)
         print("=============================================")
         for answer in quiz_answer.answers:
-            print(answer)
+            print(answer.toString())
 
         return quiz_answer
